@@ -58,8 +58,9 @@ export default function Home() {
               <FloatingDockDemo />
             </div>
             <GitHubChart />
-            <Testimonals />
+            
             <Contact />
+            <Testimonals />
             <WorldMapDemo />
             <Footer />
           </IntroScreen>

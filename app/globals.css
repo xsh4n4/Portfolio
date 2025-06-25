@@ -40,3 +40,9 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.react-activity-calendar,
+.react-activity-calendar svg {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
