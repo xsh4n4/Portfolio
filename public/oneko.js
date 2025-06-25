@@ -30,6 +30,12 @@
   let idleTime = 0;
   let idleAnimation = null;
   let idleAnimationFrame = 0;
+  nekoEl.style.opacity = "0";
+nekoEl.style.transition = "opacity 0.5s ease";
+requestAnimationFrame(() => {
+  nekoEl.style.opacity = "1";
+});
+
   const nekoSpeed = 10;
 
   const spriteSets = {

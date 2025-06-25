@@ -147,32 +147,42 @@ export default function Navbar() {
 
   useEffect(() => {
     if (catActive) {
-      if (!window.oneko) {
+      if (typeof window.oneko === "function") {
+        window.oneko();
+      } else if (!document.getElementById("cat-script")) {
         const script = document.createElement("script");
         script.src = "/oneko.js";
         script.id = "cat-script";
         script.async = true;
-        document.body.appendChild(script);
         script.onload = () => {
-          window.oneko?.();
+          if (typeof window.oneko === "function") {
+            window.oneko();
+          }
         };
-      } else {
-        window.oneko?.();
+        document.body.appendChild(script);
       }
     } else {
+      // Fade out the cat before removing
       const neko = document.getElementById("oneko");
       if (neko) {
-        neko.style.transition = "opacity 0.4s ease";
+        neko.style.transition = "opacity 0.5s ease";
         neko.style.opacity = "0";
-        setTimeout(() => neko.remove(), 400);
+        setTimeout(() => {
+          neko?.remove();
+        }, 500);
       }
+
+      // Remove script
+      const script = document.getElementById("cat-script");
+      if (script) script.remove();
     }
   }, [catActive]);
 
   return (
     <header className="w-full fixed top-0 z-50 bg-black/70 backdrop-blur-md border-b border-neutral-800 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo + Brand */}
+
+        {/* Logo */}
         <motion.div
           className="flex items-center space-x-3"
           initial={{ x: -20, opacity: 0 }}
@@ -190,7 +200,7 @@ export default function Navbar() {
           </span>
         </motion.div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-6">
           {["Home", "About", "Projects", "Experience", "Contact"].map((item, idx) => (
             <motion.div
@@ -212,7 +222,7 @@ export default function Navbar() {
 
           {/* Cat Toggle Button */}
           <button
-            onClick={() => setCatActive((prev) => !prev)}
+            onClick={() => setCatActive(prev => !prev)}
             title="Toggle Cat"
             className="text-white text-xl ml-4 hover:text-blue-400 transition"
           >
@@ -220,10 +230,10 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Nav Toggle */}
         <div className="md:hidden z-50 flex items-center gap-4">
           <button
-            onClick={() => setCatActive((prev) => !prev)}
+            onClick={() => setCatActive(prev => !prev)}
             title="Toggle Cat"
             className="text-white text-xl"
           >
@@ -235,7 +245,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Nav Menu */}
       {isOpen && (
         <div className="md:hidden bg-black/90 py-4 px-6 space-y-4 text-center text-white">
           {["Home", "About", "Projects", "Experience", "Contact"].map((item) => (
