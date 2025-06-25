@@ -41,7 +41,7 @@ export default function Home() {
 //   };
 
   return (
-      <body>
+      
         <main>
           <Navbar/>
           <IntroScreen>
@@ -64,7 +64,7 @@ export default function Home() {
             <Footer />
           </IntroScreen>
         </main>
-      </body>
+     
    
   );
 }
