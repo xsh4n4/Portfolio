@@ -12,10 +12,10 @@ const Footer = () => {
         <a href="https://github.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
           <FaGithub />
         </a>
-        <a href="mailto:suhanashaik@example.com" className="hover:text-blue-400">
+        <a href="mailto:xsh4n4@gmail.com" className="hover:text-blue-400">
           <MdEmail />
         </a>
-        <a href="https://linkedin.com/in/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+        <a href="https://linkedin.com/in/suhanask" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
           <FaLinkedin />
         </a>
         <a href="https://twitter.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
