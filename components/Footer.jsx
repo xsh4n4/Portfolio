@@ -9,16 +9,16 @@ const Footer = () => {
         xsh4n4's
       </h2>
       <div className="flex justify-center gap-6 text-xl mb-4">
-        <a href="https://github.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
+        <a href="https://github.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
           <FaGithub />
         </a>
-        <a href="mailto:suhanashaik@example.com" className="hover:text-pink-400">
+        <a href="mailto:suhanashaik@example.com" className="hover:text-blue-400">
           <MdEmail />
         </a>
-        <a href="https://linkedin.com/in/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
+        <a href="https://linkedin.com/in/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
           <FaLinkedin />
         </a>
-        <a href="https://twitter.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">
+        <a href="https://twitter.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
           <FaTwitter />
         </a>
       </div>
