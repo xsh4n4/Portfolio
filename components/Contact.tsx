@@ -1,17 +1,4 @@
-// import React from 'react'
-// import SignupFormDemo from './ui/signup-form-demo'
 
-// const Contact = () => {
-//   return (
-//     <div 
-//       id="contact"
-// className='py-10 sm:py-0'>
-//         <SignupFormDemo/>
-//     </div>
-//   )
-// }
-
-// export default Contact
 "use client";
 
 import React, { useRef, useEffect } from "react";
