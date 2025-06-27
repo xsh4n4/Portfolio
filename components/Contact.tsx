@@ -204,9 +204,9 @@ const Contact = () => {
       >
         <div className="flex items-center justify-center text-center mb-12 space-x-4">
   <Send className="text-blue-500" size={32} />
-  <h4 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
+  <h3 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
     Get in Touch
-  </h4>
+  </h3>
 </div>
 
 
@@ -264,21 +264,21 @@ const Contact = () => {
               name="name"
               placeholder="Your Name"
               required
-              className="w-full p-3 rounded-xl bg-bl-900/40 border border-blue-500/50 text-white"
+              className="w-full p-3 rounded-xl bg-blue-600/40 border border-blue-500/50 text-white"
             />
             <input
               type="email"
               name="email"
               placeholder="Your Email"
               required
-              className="w-full p-3 rounded-xl bg-blue-900/40 border border-blue-500/50 text-white"
+              className="w-full p-3 rounded-xl bg-blue-600/40 border border-blue-500/50 text-white"
             />
             <textarea
               name="message"
               placeholder="Your Message"
               rows={4}
               required
-              className="w-full p-3 rounded-xl bg-blue-900/40 border border-blue-500/50 text-white"
+              className="w-full p-3 rounded-xl bg-blue-600/40 border border-blue-500/50 text-white"
             />
             <button
               type="submit"
