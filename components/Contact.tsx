@@ -203,49 +203,41 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         <div className="flex items-center justify-center text-center mb-12 space-x-4">
-  <Send className="text-blue-500" size={32} />
-  <h3 className="text-4xl md:text-4xl font-bold text-white tracking-wide">
-    Get in Touch
-  </h3>
-</div>
-<div className="flex items-center justify-center text-center mb-12 space-x-4">
-  <Send className="text-blue-500" size={32} />
-  <h3 className="text-4xl md:text-4xl font-bold text-white tracking-wide">
-    Get in Touch
-  </h3>
-</div>
-
-
+          <Send className="text-blue-500" size={32} />
+          <h3 className="text-4xl md:text-4xl font-bold text-white tracking-wide">
+            Get in Touch
+          </h3>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Info */}
           <motion.div className="bg-white/5 p-6 md:p-8 rounded-xl backdrop-blur-xl">
-          <motion.h3
-  initial={{ opacity: 0, y: 10 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  className="text-xl font-semibold text-blue-400"
->
-  CONTACT ME :
-</motion.h3>
+            <motion.h3
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-xl font-semibold text-blue-400"
+            >
+              CONTACT ME :
+            </motion.h3>
 
 
             <div className="text-lg md:text-xl text-gray-300 mt-6 mb-8 leading-relaxed space-y-3">
-  <p>Have a project in mind? Or just want to say hi?</p>
-  <p>Feel free to reach out. I'm always open to discussing new opportunities and connecting with like-minded builders.</p>
-  
-</div>
+              <p>Have a project in mind? Or just want to say hi?</p>
+              <p>Feel free to reach out. I'm always open to discussing new opportunities and connecting with like-minded builders.</p>
+
+            </div>
 
             <motion.h3
-  initial={{ opacity: 0, y: 10 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  viewport={{ once: true }}
-  className="text-xl font-semibold text-white mb-6"
->
-  MY SOCIALS :
-</motion.h3>
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-xl font-semibold text-white mb-6"
+            >
+              MY SOCIALS :
+            </motion.h3>
             <div className="flex flex-wrap gap-4 text-blue-400">
               <a href="mailto:xsh4n4@gmail.com" title="Email" target="_blank"><FaEnvelope size={24} className="hover:text-white transition" /></a>
               <a href="https://linkedin.com/in/suhanask" title="LinkedIn" target="_blank"><FaLinkedin size={24} className="hover:text-white transition" /></a>
