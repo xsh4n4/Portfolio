@@ -208,6 +208,12 @@ const Contact = () => {
     Get in Touch
   </h3>
 </div>
+<div className="flex items-center justify-center text-center mb-12 space-x-4">
+  <Send className="text-blue-500" size={32} />
+  <h3 className="text-4xl md:text-4xl font-bold text-white tracking-wide">
+    Get in Touch
+  </h3>
+</div>
 
 
 
