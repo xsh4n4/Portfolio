@@ -268,6 +268,19 @@ const renderCards = (data: typeof education) =>
                 alt={item.title}
                 className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
               />
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
+              /><Image
+                src={item.image}
+                alt={item.title}
+                className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
+              /><Image
+                src={item.image}
+                alt={item.title}
+                className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
+              />
               <div>
                 <h3 className="text-base font-bold leading-tight">{item.title}</h3>
                 <p className="text-blue-400 text-sm">{item.subtitle}</p>
