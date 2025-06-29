@@ -245,9 +245,9 @@ const renderCards = (data: typeof education) =>
         <div className="group w-full h-[90px] [perspective:1000px]">
           <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             {/* Front */}
-            <div className="absolute inset-0 bg-black border-2 border-dotted border-blue-500 rounded-xl shadow-xl p-3 pr-4 flex items-center gap-4 [backface-visibility:hidden]">
+            <div className="absolute inset-0 bg-black border-2 border-blue-500 rounded-xl shadow-xl p-3 pr-4 flex items-center gap-4 [backface-visibility:hidden]">
             {/* tag */}
-<div className="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-semibold px-2 py-[2px] shadow-md rounded-tl-xl rounded-br-xl">
+<div className="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-semibold px-2 py-[2px] shadow-md rounded-xl">
   {item.duration}
 </div>
 {/* bg-[#0f172a] */}
@@ -255,6 +255,15 @@ const renderCards = (data: typeof education) =>
 
               {/* Image + Text */}
               <Image
+                src={item.image}
+                alt={item.title}
+                className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
+              />
+              <Image
+                src={item.image}
+                alt={item.title}
+                className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
+              /><Image
                 src={item.image}
                 alt={item.title}
                 className="w-16 h-16 object-cover rounded-xl border border-white/10 shadow-md"
