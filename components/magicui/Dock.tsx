@@ -41,7 +41,11 @@ export function FloatingDockDemo() {
       icon: <IconBrandX className="h-full w-full text-white dark:text-white" />,
       href: "https://twitter.com/karaan_dev",
     },
-
+    {
+      title: "GitHub",
+      icon: <IconBrandGithub className="h-full w-full text-white dark:text-white" />,
+      href: "https://github.com/Kendrekaran",
+    },
     {
       title: "LinkedIn",
       icon: <RiLinkedinLine className="h-full w-full text-white dark:text-white" />,
@@ -52,15 +56,11 @@ export function FloatingDockDemo() {
       icon: <IconBrandX className="h-full w-full text-white dark:text-white" />,
       href: "https://twitter.com/karaan_dev",
     },
-
-    
-
-
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-full w-full text-white dark:text-white" />,
       href: "https://github.com/Kendrekaran",
-    },
+    }
   ];
 
   return (
