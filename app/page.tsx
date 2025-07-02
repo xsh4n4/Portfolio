@@ -18,6 +18,7 @@ import TimeLineSection from '@/components/TimeLineSection';
 import CyberCubeGrid from '@/components/CyberCubeGrid';
 import GitHubChart from "@/components/GitHubChart";
 import Footer from "@/components/Footer";
+import { GlareCardDemo } from "@/components/magicui/Cards";
 // import oneko from '../app/oneko';
 export default function Home() {
   useEffect(() => {
@@ -48,6 +49,7 @@ export default function Home() {
 
             <Hero />
             <About/>
+            <GlareCardDemo/>
             <TimeLineSection />
             <Projects />
             <Blog />

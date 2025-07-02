@@ -30,7 +30,6 @@ export default function SignupFormDemo() {
             />
           </div>
         <p className="text-sm md:text-base max-w-md text-neutral-300 px-8">
-          Have a project in mind? I&apos;d love to hear from you! Reach out to me, and let&apos;s turn your ideas into reality.
           Have a project in mind or just want to say hi? Feel free to reach out via Twitter. I'm always open to discussing new opportunities and connecting with like-minded individuals.
         </p>
 
@@ -40,7 +39,7 @@ export default function SignupFormDemo() {
           className="relative group/btn flex space-x-2 items-center justify-start px-4 py-2 rounded-md font-medium bg-zinc-900 text-neutral-300 shadow-lg hover:shadow-xl transition-all"
           type="button"
         >
-          <Link href="https://twitter.com/karaan_dev" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+          <Link href="https://twitter.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
             <IconBrandTwitter className="h-5 w-5" />
           <span>Twitter</span>
           </Link>
@@ -52,7 +51,7 @@ export default function SignupFormDemo() {
           type="button"
         >
           <Link
-            href="mailto:karankendreg@gmail.com" // Replace with your actual email
+            href="mailto:xsh4n4@gmail.com" // Replace with your actual email
             className="flex space-x-2"
           >
             {/* You can replace the icon below with any email icon you want */}
@@ -68,7 +67,7 @@ export default function SignupFormDemo() {
           className="relative group/btn flex space-x-2 items-center justify-start px-4 py-2 rounded-md font-medium bg-zinc-900 text-neutral-300 shadow-lg hover:shadow-xl transition-all"
           type="button"
         >
-          <Link href="https://github.com/kendrekaran" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+          <Link href="https://github.com/xsh4n4" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
             <IconBrandGithub className="h-5 w-5" />
           <span>GitHub</span>
           </Link>
@@ -80,7 +79,7 @@ export default function SignupFormDemo() {
           className="relative group/btn flex space-x-2 items-center justify-start px-4 py-2 rounded-md font-medium bg-zinc-900 text-neutral-300 shadow-lg hover:shadow-xl transition-all"
           type="button"
         >
-          <Link href="https://linkedin.com/in/kendrekaran" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
+          <Link href="https://linkedin.com/in/suhanask" target="_blank" rel="noopener noreferrer" className="flex space-x-2">
             <IconBrandLinkedin className="h-5 w-5" />
           <span>LinkedIn</span>
           </Link>
