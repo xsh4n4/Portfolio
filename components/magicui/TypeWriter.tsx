@@ -34,6 +34,126 @@ export function TypewriterEffectSmoothDemo() {
       text: "('Hello World');",
       className: "text-blue-500 dark:text-blue-500",
     },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];const words = [
+    
+    {
+      text: "console.log",
+      className: "text-white"
+    },
+    {
+      text: "('Hello World');",
+      className: "text-blue-500 dark:text-blue-500",
+    },
   ];
   return (
     <div className="flex flex-col items-center justify-center h-[5rem]  ">
