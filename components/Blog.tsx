@@ -31,6 +31,39 @@ const blogs = [
     description: "An unified Multicloud storage application for Google Drive and one drive.",
     image: Multicloud,
     link: "http://multicloud-woad.vercel.app",
+  },{
+    title: "CloudSync",
+    description: "An unified Multicloud storage application for Google Drive and one drive.",
+    image: Multicloud,
+    link: "http://multicloud-woad.vercel.app",
+  },
+  {
+    title: "FemCare",
+    description: "AI Based Health Recommendation (GMM) .",
+    image: food,
+    link: "https://fem-care-five.vercel.app/",
+  },{
+    title: "CloudSync",
+    description: "An unified Multicloud storage application for Google Drive and one drive.",
+    image: Multicloud,
+    link: "http://multicloud-woad.vercel.app",
+  },
+  {
+    title: "FemCare",
+    description: "AI Based Health Recommendation (GMM) .",
+    image: food,
+    link: "https://fem-care-five.vercel.app/",
+  },{
+    title: "CloudSync",
+    description: "An unified Multicloud storage application for Google Drive and one drive.",
+    image: Multicloud,
+    link: "http://multicloud-woad.vercel.app",
+  },
+  {
+    title: "FemCare",
+    description: "AI Based Health Recommendation (GMM) .",
+    image: food,
+    link: "https://fem-care-five.vercel.app/",
   },
   {
     title: "FemCare",
