@@ -26,7 +26,7 @@ const securityData = [
     description: "Submitted a flash loan exploit vector. Not accepted, but detailed analysis provided.",
     link: "https://medium.com/@suhana-olympus-writeup",
     status: "Not Rewarded - Proof of Skill",
-  },
+  }
 ];
 
 export default function SecurityPortfolio() {
