@@ -46,3 +46,15 @@ body {
   margin: 0 !important;
   padding: 0 !important;
 }
+@keyframes borderScanner {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-borderScanner {
+  animation: borderScanner 2s infinite;
+}
