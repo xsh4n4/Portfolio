@@ -194,6 +194,20 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
                     height={80}
                     className="object-contain"
                   />
+                  <Image
+                    src="/sig-Photoroom.png" // Replace this with your actual GIF path
+                    alt="Suhana Signature"
+                    width={200}
+                    height={80}
+                    className="object-contain"
+                  />
+                  <Image
+                    src="/sig-Photoroom.png" // Replace this with your actual GIF path
+                    alt="Suhana Signature"
+                    width={200}
+                    height={80}
+                    className="object-contain"
+                  />
                 </motion.div>
               </motion.div>
 
