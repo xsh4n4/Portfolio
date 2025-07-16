@@ -188,7 +188,7 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
                   onAnimationComplete={() => setNameVisible(true)}
                 >
                   <Image
-                    src="/sig-Photo.png" // Replace this with your actual GIF path
+                    src="/signature.png" // Replace this with your actual GIF path
                     alt="Suhana Signature"
                     width={200}
                     height={80}

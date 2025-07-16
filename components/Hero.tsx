@@ -14,7 +14,7 @@ import {
   FaChevronDown,
 } from "react-icons/fa6";
 
-import profilex from "@/components/assets/profilex.jpg";
+import profile3 from "@/components/assets/profile3.jpg";
 
 const Hero = () => {
   return (
@@ -31,7 +31,7 @@ const Hero = () => {
         {/* Profile - LEFT ON DESKTOP */}
         <div className="flex flex-col items-center md:items-start">
           <Image
-            src={profilex}
+            src={profile3}
             alt="profile"
             width={256}
             height={256}
