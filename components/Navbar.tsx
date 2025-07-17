@@ -202,7 +202,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-6">
-          {["Home", "About", "Projects", "Experience", "Contact"].map((item, idx) => (
+          {["Home", "About", "Projects", "Skills", "Contact"].map((item, idx) => (
             <motion.div
               key={item}
               whileHover={{ scale: 1.1 }}
@@ -248,7 +248,7 @@ export default function Navbar() {
       {/* Mobile Nav Menu */}
       {isOpen && (
         <div className="md:hidden bg-black/90 py-4 px-6 space-y-4 text-center text-white">
-          {["Home", "About", "Projects", "Experience", "Contact"].map((item) => (
+          {["Home", "About", "Projects", "Skills", "Contact"].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}

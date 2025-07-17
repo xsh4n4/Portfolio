@@ -142,7 +142,10 @@ export default function WorldMapDemo() {
             India
           </span>
         </div>
+        
       </div>
+      
     </div>
+    
   );
 }

@@ -161,7 +161,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="md:w-[45%] w-full flex justify-center mt-16 md:mt-6"
+          className="md:w-[45%] w-full flex justify-center mt-20 mb-20 md:mt-8"
         >
           <div className="w-full max-w-md h-[300px] sm:h-[360px] flex items-center justify-center">
             <IconCloud iconSlugs={iconSlugs} />

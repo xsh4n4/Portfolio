@@ -50,7 +50,7 @@ const categories = [
 
 export default function Skills() {
   return (
-    <section className="relative py-20 px-4 md:px-12 bg-black text-white w-full">
+    <section id ="skills" className="relative py-20 px-4 md:px-12 bg-black text-white w-full">
 {/* Cyber SVG background */}
  <svg className="absolute inset-0 w-full h-full opacity-10 z-0" viewBox="0 0 100 100" preserveAspectRatio="none">
   <defs>

@@ -23,13 +23,13 @@ const Hero = () => {
       className="w-full px-4 md:px-16 lg:px-32 pt-40 pb-28 overflow-hidden relative"
     >
       {/* Spotlight */}
-      <Spotlight className="top-16 left-10 md:left-32 md:top-20 h-screen" fill="white" />
+      <Spotlight className="top-16 left-10 md:left-32 md:top-20 z-0 h-screen" fill="white" />
 
       {/* Container - LAYOUT SWITCH */}
       <div className="flex flex-col md:flex-row items-center md:items-start justify-center gap-10 text-white text-center md:text-left">
 
         {/* Profile - LEFT ON DESKTOP */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start z-30">
           <Image
             src={profile3}
             alt="profile"
