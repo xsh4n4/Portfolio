@@ -163,7 +163,7 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
                 transition={{ delay: 1 }}
               >
                 {/* Logo on the left */}
-                <motion.div
+                {/* <motion.div
                   ref={logoRef}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -176,7 +176,7 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
                     height={100}
                     className="rounded-full border-2 border-blue-400 shadow-lg"
                   />
-                </motion.div>
+                </motion.div> */}
 
                 {/* GIF instead of name on the right */}
                 <motion.div

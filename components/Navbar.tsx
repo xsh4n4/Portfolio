@@ -50,7 +50,7 @@
 //           animate={{ x: 0, opacity: 1 }}
 //         >
 //           <Image
-//             src="/logo.png"
+//             src="/oneko-logo.png"
 //             alt="Logo"
 //             width={32}
 //             height={32}
@@ -189,7 +189,7 @@ export default function Navbar() {
           animate={{ x: 0, opacity: 1 }}
         >
           <Image
-            src="/logo.png"
+            src="/oneko-logo.jpg"
             alt="Logo"
             width={32}
             height={32}

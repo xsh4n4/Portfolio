@@ -14,17 +14,17 @@ export function FloatingDockDemo() {
     {
       title: "Medium",
       icon: <SiMedium className="h-full w-full text-white dark:text-white" />,
-      href: "https://medium.com/@yourhandle", // replace with your real Medium handle
+      href: "https://medium.com/@xsh4n4", 
     },
     {
       title: "Mail",
       icon: <HiOutlineMail className="h-full w-full text-white dark:text-white" />,
-      href: "mailto:suhana@email.com", // replace with your email
+      href: "mailto:xsh4n4@gmail.com", 
     },
     // {
     //   title: "Cantina",
     //   icon: <LuGlobe className="h-full w-full text-white dark:text-white" />,
-    //   href: "https://cantina.xyz/profile/your-username", // replace with your Cantina profile if live
+    //   href: "https://cantina.xyz/profile/your-username", 
     // },
     {
       title: "Resume",
@@ -34,17 +34,17 @@ export function FloatingDockDemo() {
     {
       title: "LinkedIn",
       icon: <RiLinkedinLine className="h-full w-full text-white dark:text-white" />,
-      href: "https://www.linkedin.com/in/kendrekaran",
+      href: "https://www.linkedin.com/in/suhanask",
     },
     {
       title: "Twitter",
       icon: <IconBrandX className="h-full w-full text-white dark:text-white" />,
-      href: "https://twitter.com/karaan_dev",
+      href: "https://twitter.com/xsh4n4",
     },
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-full w-full text-white dark:text-white" />,
-      href: "https://github.com/Kendrekaran",
+      href: "https://github.com/xsh4n4",
     },
   ];
 

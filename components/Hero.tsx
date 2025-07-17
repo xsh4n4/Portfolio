@@ -66,7 +66,7 @@ const Hero = () => {
 
           {/* Contact Icons */}
           <div className="flex gap-5 mt-2 text-white text-2xl">
-            <a href="mailto:suhana@example.com" target="_blank" rel="noopener noreferrer" title="Email" className="hover:text-blue-400 transition">
+            <a href="mailto:xsh4n4@gmail.com" target="_blank" rel="noopener noreferrer" title="Email" className="hover:text-blue-400 transition">
               <FaEnvelope />
             </a>
             <a href="https://twitter.com/xsh4n4" target="_blank" rel="noopener noreferrer" title="Twitter / X" className="hover:text-blue-400 transition">

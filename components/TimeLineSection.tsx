@@ -159,54 +159,56 @@ import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import profile1 from "@/components/assets/profilex.jpg";
-import profile2 from "@/components/assets/profilex.jpg";
-import profile3 from "@/components/assets/profilex.jpg";
+import sindhulogo from "@/components/assets/sindhulogo.jpg";
+import rguktlogo from "@/components/assets/rguktlogo.jpg";
+import acmegradelogo from "@/components/assets/acmegradelogo.jpg";
+
 
 const education = [
   {
-    title: "B.Tech in Computer Science",
-    subtitle: "XYZ University",
-    duration: "2019 – 2023",
+    title: "High School Education",
+    subtitle: "Sindhu Educational Institutions",
+    duration: "2010 – 2020",
     description: "Focused on Web Development, Blockchain, and AI.",
-    image: profile1,
+    image: sindhulogo,
   },
   {
-    title: "Blockchain Bootcamp",
-    subtitle: "Alchemy University",
-    duration: "2023",
+    title: "Pre-University Course",
+    subtitle: "Rajiv Gandhi University of Knowledge Technologies",
+    duration: "2020-2022",
     description: "Hands-on Ethereum, Solidity, and Web3.js.",
-    image: profile2,
+    image: rguktlogo,
   },
   {
-    title: "Cybersecurity Training",
-    subtitle: "TryHackMe Labs",
-    duration: "2024",
+    title: "B.Tech in Computer Science and Engineering",
+    subtitle: "RGUKT Nuzvid",
+    duration: "2022-2026",
     description: "Learned pen-testing and network defense.",
-    image: profile3,
+    image: rguktlogo,
   },
 ];
 
 const experience = [
   {
     title: "Frontend Developer Intern",
-    subtitle: "TechNova Pvt. Ltd.",
+    subtitle: "Acmegrade",
     duration: "Jan – May 2024",
     description: "Built reusable UI components, boosted performance.",
-    image: profile1,
+    image: acmegradelogo,
   },
   {
     title: "Blockchain Developer",
     subtitle: "Web3 Labs",
     duration: "Jun 2024 – Present",
     description: "Developed & deployed smart contracts.",
-    image: profile2,
+    image: profile1,
   },
   {
     title: "Smart Contract Auditor",
     subtitle: "SecureBlock",
     duration: "2025 – Present",
     description: "Auditing Ethereum contracts for vulnerabilities.",
-    image: profile3,
+    image: profile1,
   },
 ];
 
