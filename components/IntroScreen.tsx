@@ -93,7 +93,7 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
   const [nameVisible, setNameVisible] = useState(false);
 
 
-  const [logoRef, logoBox] = useBoundingBox();
+  // const [logoRef, logoBox] = useBoundingBox();
   const [nameRef, nameBox] = useBoundingBox();
   const [taglineRef, taglineBox] = useBoundingBox();
   const [quoteRef, quoteBox] = useBoundingBox();
@@ -125,7 +125,7 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
           return prev + 1;
         });
         index++;
-      }, 2500); // time to scan each section
+      }, 3000); // time to scan each section
     }, 2500); // wait for full content fade-in before scanning starts
 
     return () => {

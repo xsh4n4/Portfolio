@@ -12,7 +12,7 @@ const GitHubChart = () => (
 
     <div className="flex justify-center">
       <div className="inline-block max-w-full leading-none">
-        <GitHubCalendar username="xsh4n4" />
+        <GitHubCalendar username="xsh4n4"/>
       </div>
     </div>
   </section>
