@@ -105,7 +105,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Nav Toggle */}
-        <div className="md:hidden z-50 flex items-center gap-4">
+        <div className="md:hidden z-50 flex items-center gap-3">
           <button
             onClick={() => setCatActive(prev => !prev)}
             title="Toggle Cat"

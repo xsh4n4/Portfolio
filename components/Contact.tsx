@@ -42,13 +42,10 @@ const Contact = () => {
       };
 
       const formData = {
-  name: formElements.name.value,
-  email: formElements.email.value,
-  message: formElements.message.value,
-  // title: "Portfolio Contact", // optional - used in Subject
-  // time: new Date().toLocaleString(), // optional - used in body
-};
-
+        name: formElements.name.value,
+        email: formElements.email.value,
+        message: formElements.message.value
+      };
 
       emailjs
         .send(serviceID, templateID, formData)
@@ -74,78 +71,84 @@ const Contact = () => {
       >
         <div className="flex items-center justify-center text-center mb-12 space-x-4">
           <Send className="text-blue-500" size={32} />
-          <h3 className="text-4xl md:text-4xl font-bold text-white tracking-wide">
-            Get in Touch
-          </h3>
+          <h3 className="text-4xl font-bold text-white tracking-wide">Get in Touch</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Info */}
           <motion.div className="bg-white/5 p-6 md:p-8 rounded-xl backdrop-blur-xl">
-             {/* CONTACT ME */} 
-<motion.h3
+            {/* <motion.h3
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-xl font-semibold text-blue-400 relative inline-block w-fit"
+            >
+              CONTACT ME :
+              <motion.div
+                className="absolute -bottom-1 left-0 h-0.5 bg-blue-400 rounded-full"
+                initial={{ width: "0%" }}
+                whileInView={{ width: "100%" }}
+                transition={{ duration: 1, delay: 0.3 }}
+                viewport={{ once: true }}
+              />
+            </motion.h3> */}
+            <motion.div
   initial={{ opacity: 0, y: 10 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
-  className="text-xl font-semibold text-blue-400 relative inline-block w-fit"
+  className="inline-block w-fit"
 >
-  CONTACT ME :
-  <motion.div
-    className="absolute -bottom-1 left-0 h-0.5 bg-blue-400 rounded-full"
-    initial={{ width: "0%" }}
-    whileInView={{ width: "100%" }}
-    transition={{ duration: 1, delay: 0.3 }}
-    viewport={{ once: true }}
-  />
-</motion.h3>
+  <button className="w-40 h-8 rounded-xl bg-blue-600 text-white text-xl font-semibold">
+                CONTACT ME
+              </button>
+</motion.div>
 
 
-
-            <div className="text-lg md:text-xl text-gray-300 mt-6 mb-8 leading-relaxed space-y-3">
+            <div className="text-lg md:text-xl text-gray-300 mt-6 mb-10 leading-relaxed space-y-3">
               <p>Have a project in mind? Or just want to say hi?</p>
-              <p>Feel free to reach out. I'm always open to discussing new opportunities and connecting with like-minded builders.</p>
-
+              <p>
+                Feel free to reach out. I'm always open to discussing new
+                opportunities and connecting with like-minded builders.
+              </p>
             </div>
 
-          {/* MY SOCIALS */}
-<motion.h3
+             <motion.div
   initial={{ opacity: 0, y: 10 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
-  className="text-xl font-semibold text-white relative inline-block w-fit mb-4"
+  className="inline-block w-fit"
 >
-  MY SOCIALS :
-  <motion.div
-    className="absolute -bottom-1 left-0 h-0.5 bg-white rounded-full"
-    initial={{ width: "0%" }}
-    whileInView={{ width: "100%" }}
-    transition={{ duration: 1, delay: 0.3 }}
-    viewport={{ once: true }}
-  />
-</motion.h3>
+  <button className="w-40 h-8 rounded-xl bg-blue-600 text-white text-xl font-semibold">
+                MY SOCIALS
+              </button>
+</motion.div>
 
-<div className="flex flex-wrap gap-5 text-blue-400 text-[1.75rem] mt-6 mb-8">
-  <a href="mailto:xsh4n4@gmail.com" title="Email" target="_blank"><FaEnvelope size={28} className="hover:text-white transition" /></a>
-  <a href="https://linkedin.com/in/suhanask" title="LinkedIn" target="_blank"><FaLinkedin size={28} className="hover:text-white transition" /></a>
-  <a href="https://github.com/xsh4n4" title="GitHub" target="_blank"><FaGithub size={28} className="hover:text-white transition" /></a>
-  <a href="https://x.com/xsh4n4" title="X / Twitter" target="_blank"><FaXTwitter size={28} className="hover:text-white transition" /></a>
-  <a href="https://discord.com/users/yourid" title="Discord" target="_blank"><FaDiscord size={28} className="hover:text-white transition" /></a>
-  <a href="https://medium.com/@xsh4n4" title="Medium" target="_blank"><SiMedium size={28} className="hover:text-white transition" /></a>
-  <a href="https://t.me/yourusername" title="Telegram" target="_blank"><FaTelegram size={28} className="hover:text-white transition" /></a>
-  <a href="/resume.pdf" title="Resume" target="_blank"><LuFileText size={28} className="hover:text-white transition" /></a>
-  <a href="https://cantina.xyz/yourprofile" title="Cantina" target="_blank"><GiLaserPrecision size={28} className="hover:text-white transition" /></a>
-  <a href="https://immunefi.com/profile/xsh4n4" title="Immunefi" target="_blank"><GiShield size={28} className="hover:text-white transition" /></a>
-  <a href="https://hackerone.com/xsh4n4" title="HackerOne" target="_blank"><SiHackerone size={28} className="hover:text-white transition" /></a>
-  <a href="https://code4rena.com/yourprofile" title="Code4rena" target="_blank"><SiTarget size={28} className="hover:text-white transition" /></a>
-  <a href="https://warpcast.com/xsh4n4" title="Farcaster" target="_blank"><TbBrandFigma size={28} className="hover:text-white transition" /></a>
-</div>
-
+            <div className="flex flex-wrap gap-5 text-white text-[1.75rem] mt-6 mb-10">
+              <a href="mailto:xsh4n4@gmail.com" title="Email" target="_blank"><FaEnvelope className="hover:text-blue-400 transition" /></a>
+              <a href="https://linkedin.com/in/suhanask" title="LinkedIn" target="_blank"><FaLinkedin className="hover:text-blue-400 transition" /></a>
+              <a href="https://github.com/xsh4n4" title="GitHub" target="_blank"><FaGithub className="hover:text-blue-400 transition" /></a>
+              <a href="https://x.com/xsh4n4" title="Twitter" target="_blank"><FaXTwitter className="hover:text-blue-400 transition" /></a>
+              <a href="https://discord.com/users/yourid" title="Discord" target="_blank"><FaDiscord className="hover:text-blue-400 transition" /></a>
+              <a href="https://medium.com/@xsh4n4" title="Medium" target="_blank"><SiMedium className="hover:text-blue-400 transition" /></a>
+              <a href="https://t.me/yourusername" title="Telegram" target="_blank"><FaTelegram className="hover:text-blue-400 transition" /></a>
+              <a href="/resume.pdf" title="Resume" target="_blank"><LuFileText className="hover:text-blue-400 transition" /></a>
+              <a href="https://cantina.xyz/yourprofile" title="Cantina" target="_blank"><GiLaserPrecision className="hover:text-blue-400 transition" /></a>
+              <a href="https://immunefi.com/profile/xsh4n4" title="Immunefi" target="_blank"><GiShield className="hover:text-blue-400 transition" /></a>
+              <a href="https://hackerone.com/xsh4n4" title="HackerOne" target="_blank"><SiHackerone className="hover:text-blue-400 transition" /></a>
+              <a href="https://code4rena.com/yourprofile" title="Code4rena" target="_blank"><SiTarget className="hover:text-blue-400 transition" /></a>
+              <a href="https://warpcast.com/xsh4n4" title="Farcaster" target="_blank"><TbBrandFigma className="hover:text-blue-400 transition" /></a>
+            </div>
           </motion.div>
 
           {/* Contact Form */}
-          <motion.form ref={form} onSubmit={handleSubmit} className="space-y-4 bg-white/5 p-6 md:p-8 rounded-xl backdrop-blur-xl">
+          <motion.form
+            ref={form}
+            onSubmit={handleSubmit}
+            className="space-y-4 bg-white/5 p-6 md:p-8 rounded-xl backdrop-blur-xl"
+          >
             <input
               type="text"
               name="name"
@@ -177,7 +180,6 @@ const Contact = () => {
         </div>
       </motion.div>
 
-      {/* Toast Container */}
       <ToastContainer position="top-center" autoClose={3000} hideProgressBar />
     </section>
   );
