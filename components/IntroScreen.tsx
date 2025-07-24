@@ -198,7 +198,7 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
               </motion.div>
 
 
-              <motion.p
+              {/* <motion.p
                 ref={taglineRef}
                 className="text-white text-lg md:text-xl tracking-wide opacity-0"
                 initial={{ opacity: 0 }}
@@ -206,11 +206,11 @@ const IntroScreen = ({ children }: { children: React.ReactNode }) => {
                 transition={{ delay: 3 }}
               >
                 Fullstack Developer • Blockchain Builder • Cybersecurity Enthusiast
-              </motion.p>
+              </motion.p> */}
 
               <motion.p
                 ref={quoteRef}
-                className="italic text-blue-300 text-md md:text-base opacity-0"
+                className="text-blue-300 text-md md:text-base opacity-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 4 }}

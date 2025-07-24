@@ -249,9 +249,11 @@ const renderCards = (data: typeof education) =>
             {/* Front */}
             <div className="absolute inset-0 bg-black border-2 border-blue-500 rounded-xl shadow-xl p-3 pr-4 flex items-center gap-4 [backface-visibility:hidden]">
             {/* tag */}
-<div className="absolute top-2 right-2 bg-blue-600 text-white text-[10px] font-semibold px-2 py-[2px] shadow-md rounded-xl">
+    <div className="absolute top-2 right-2 border border-blue-700 bg-blue-500 text-[10px] text-white px-2 py-[1px] font-bold rounded">
   {item.duration}
 </div>
+
+
 {/* bg-[#0f172a] */}
              
 

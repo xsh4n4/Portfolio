@@ -15,6 +15,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes, FaPaw } from "react-icons/fa";
 
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [catActive, setCatActive] = useState(true);
@@ -54,28 +55,27 @@ export default function Navbar() {
 
   return (
     <header className="w-full fixed top-0 z-50 bg-black/70 backdrop-blur-md border-b border-neutral-800 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 h-16 flex items-center justify-between">
 
-        {/* Logo */}
-        <motion.div
-          className="flex items-center space-x-3"
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-        >
-          {/* <Image
-            src="/oneko-logo.jpg"
-            alt="Logo"
-            width={32}
-            height={32}
-            className="rounded-full object-cover shadow-md"
-          /> */}
-          <span className="text-white text-xl md:text-2xl font-bold tracking-wide">
-            xsh4n4's
-          </span>
-        </motion.div>
+        
+
+      <motion.div
+  className="flex items-center space-x-3"
+  initial={{ x: -20, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+>
+  <Image
+    src="/signature.png"
+    alt="Signature"
+    width={150}
+    height={40}
+    className="h-30 w-auto object-contain"
+  />
+</motion.div>
+
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden text:lg md:flex items-center space-x-6">
           {["Home", "About", "Projects", "Skills", "Contact"].map((item, idx) => (
             <motion.div
               key={item}

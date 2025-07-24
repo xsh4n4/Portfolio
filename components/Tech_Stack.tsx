@@ -73,24 +73,24 @@ export default function Skills() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center text-4xl md:text-5xl font-bold mb-12"
-        >
-          <h2 className="text-3xl md:text-5xl text-white lg:text-5xl font-bold relative inline-block">
-            TECH <span className="text-blue-500">STACK</span>
-            <motion.div 
-              className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-500 rounded-full"
-              initial={{ width: "0%" }}
-              whileInView={{ width: "100%" }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.5 }}
-            />
-          </h2>
-         
-        </motion.h2>
+  initial={{ opacity: 0, y: -20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.7 }}
+  className="text-center text-4xl md:text-5xl font-bold mb-12"
+>
+  <span className="text-3xl md:text-5xl text-white lg:text-5xl font-bold relative inline-block">
+    TECH <span className="text-blue-500">STACK</span>
+    <motion.div 
+      className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-500 rounded-full"
+      initial={{ width: "0%" }}
+      whileInView={{ width: "100%" }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: 0.5 }}
+    />
+  </span>
+</motion.h2>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3">
           {categories.map((category, i) => (

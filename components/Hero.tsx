@@ -39,9 +39,13 @@ const Hero = () => {
             priority
           />
           <p className="mt-2 text-xs text-green-400 flex items-center gap-1">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            AVAILABLE FOR FREELANCE PROJECTS
-          </p>
+  <span
+    className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_4px_rgba(34,197,94,0.7)]"
+  />
+  AVAILABLE FOR FREELANCE PROJECTS
+</p>
+
+
         </div>
 
         {/* Content - RIGHT ON DESKTOP */}

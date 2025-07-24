@@ -71,7 +71,11 @@ const Contact = () => {
       >
         <div className="flex items-center justify-center text-center mb-12 space-x-4">
           <Send className="text-blue-500" size={32} />
-          <h3 className="text-4xl font-bold text-white tracking-wide">Get in Touch</h3>
+          <h3 className="text-5xl font-bold tracking-wide">
+  <span className="text-white">Get in </span>
+  <span className="text-blue-500">Touch</span>
+</h3>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -98,15 +102,18 @@ const Contact = () => {
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
-  className="inline-block w-fit"
+  className="w-full"
 >
-  <button className="w-40 h-8 rounded-xl bg-blue-600 text-white text-xl font-semibold">
-                CONTACT ME
-              </button>
+  <div className="flex justify-center items-center w-full">
+    <button className="w-40 h-8 rounded-xl bg-blue-600 text-white text-xl font-semibold">
+      CONTACT ME
+    </button>
+  </div>
 </motion.div>
 
 
-            <div className="text-lg md:text-xl text-gray-300 mt-6 mb-10 leading-relaxed space-y-3">
+
+            <div className="text-lg md:text-xl text-gray-300 text-center mt-6 mb-10 leading-relaxed space-y-3">
               <p>Have a project in mind? Or just want to say hi?</p>
               <p>
                 Feel free to reach out. I'm always open to discussing new
@@ -114,19 +121,25 @@ const Contact = () => {
               </p>
             </div>
 
-             <motion.div
+            <motion.div
   initial={{ opacity: 0, y: 10 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
-  className="inline-block w-fit"
+  className="w-full"
 >
-  <button className="w-40 h-8 rounded-xl bg-blue-600 text-white text-xl font-semibold">
-                MY SOCIALS
-              </button>
+  <div className="flex justify-center items-center w-full">
+    <button className="w-40 h-8 rounded-xl bg-blue-600 text-white text-xl font-semibold">
+      MY SOCIALS
+    </button>
+  </div>
 </motion.div>
 
-            <div className="flex flex-wrap gap-5 text-white text-[1.75rem] mt-6 mb-10">
+
+
+         <div className="w-full flex justify-center">
+  <div className="grid grid-cols-8 gap-x-5 gap-y-6 text-white text-[1.75rem] mt-6 mb-10 mx-auto">
+
               <a href="mailto:xsh4n4@gmail.com" title="Email" target="_blank"><FaEnvelope className="hover:text-blue-400 transition" /></a>
               <a href="https://linkedin.com/in/suhanask" title="LinkedIn" target="_blank"><FaLinkedin className="hover:text-blue-400 transition" /></a>
               <a href="https://github.com/xsh4n4" title="GitHub" target="_blank"><FaGithub className="hover:text-blue-400 transition" /></a>
@@ -140,6 +153,7 @@ const Contact = () => {
               <a href="https://hackerone.com/xsh4n4" title="HackerOne" target="_blank"><SiHackerone className="hover:text-blue-400 transition" /></a>
               <a href="https://code4rena.com/yourprofile" title="Code4rena" target="_blank"><SiTarget className="hover:text-blue-400 transition" /></a>
               <a href="https://warpcast.com/xsh4n4" title="Farcaster" target="_blank"><TbBrandFigma className="hover:text-blue-400 transition" /></a>
+            </div>
             </div>
           </motion.div>
 
