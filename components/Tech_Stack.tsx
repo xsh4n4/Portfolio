@@ -237,16 +237,6 @@ export default function Skills() {
                     className={`relative group text-3xl ${category.colors[index]} hover:scale-110 transition-transform duration-300`}
                   >
                     <Icon />
-                    <span className="absolute bottom-[-1.8rem] left-1/2 -translate-x-1/2 text-xs bg-black text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {Icon.name.replace("Si", "")}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+   
   );
 }
