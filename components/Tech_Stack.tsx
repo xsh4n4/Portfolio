@@ -219,36 +219,3 @@ export default function Skills() {
   </span>
 </motion.h2>
 
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3">
-          {categories.map((category, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="rounded-xl bg-[#0f0f0f]/80 border border-neutral-800 p-6 shadow-lg backdrop-blur-md hover:shadow-blue-500/20 transition"
-            >
-              <h3 className="text-xl font-semibold mb-2 text-blue-400">{category.title}</h3>
-              <p className="text-gray-400 mb-4 text-sm">{category.description}</p>
-              <div className="flex flex-wrap gap-4 items-center">
-                {category.icons.map((Icon, index) => (
-                  <div
-                    key={index}
-                    className={`relative group text-3xl ${category.colors[index]} hover:scale-110 transition-transform duration-300`}
-                  >
-                    <Icon />
-                    <span className="absolute bottom-[-1.8rem] left-1/2 -translate-x-1/2 text-xs bg-black text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {Icon.name.replace("Si", "")}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
