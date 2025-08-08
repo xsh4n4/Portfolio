@@ -162,6 +162,7 @@ import profile1 from "@/components/assets/profilex.jpg";
 import sindhulogo from "@/components/assets/sindhulogo.jpg";
 import rguktlogo from "@/components/assets/rguktlogo.jpg";
 import acmegradelogo from "@/components/assets/acmegradelogo.jpg";
+import toshiklogo from "@/components/assets/toshiklogo.jpg";
 
 
 const education = [
@@ -169,47 +170,48 @@ const education = [
     title: "High School Education",
     subtitle: "Sindhu Educational Institutions",
     duration: "2010 – 2020",
-    description: "Focused on Web Development, Blockchain, and AI.",
+    description: "Played a key role in shaping my discipline, work ethic, and eagerness to learn. Helped me develop both academic and personal strengths.",
     image: sindhulogo,
   },
   {
     title: "Pre-University Course",
     subtitle: "Rajiv Gandhi University of Knowledge Technologies",
     duration: "2020-2022",
-    description: "Hands-on Ethereum, Solidity, and Web3.js.",
+    description: "Sparked my early interest in computers and emerging technologies. Encouraged hands-on learning and curiosity beyond the classroom.",
     image: rguktlogo,
   },
   {
     title: "B.Tech in Computer Science and Engineering",
     subtitle: "RGUKT Nuzvid",
     duration: "2022-2026",
-    description: "Learned pen-testing and network defense.",
+    description: "I discovered my passion for blockchain technology. I immersed myself in learning Solidity, smart contract security, and decentralized ecosystems.",
     image: rguktlogo,
   },
 ];
 
 const experience = [
   {
-    title: "Frontend Developer Intern",
+    title: "Fullstack Developer Intern",
     subtitle: "Acmegrade",
     duration: "Jan – May 2024",
-    description: "Built reusable UI components, boosted performance.",
+    description: "Contributed to building full-stack web applications using React, Node.js, and REST APIs. Gained practical experience in frontend-backend integration and real-world agile workflows.",
     image: acmegradelogo,
   },
   {
     title: "Blockchain Developer",
-    subtitle: "Web3 Labs",
-    duration: "Jun 2024 – Present",
-    description: "Developed & deployed smart contracts.",
-    image: profile1,
+    subtitle: "Toshik IT Solutions",
+    duration: "May 2025 – July 2025",
+    description: "Focused on smart contract development and integration using Solidity and Foundry. Built and optimized secure, gas-efficient contracts for real-world decentralized applications.",
+    image: toshiklogo,
   },
-  {
-    title: "Smart Contract Auditor",
-    subtitle: "SecureBlock",
-    duration: "2025 – Present",
-    description: "Auditing Ethereum contracts for vulnerabilities.",
-    image: profile1,
-  },
+  // {
+  //   title: "Smart Contract Auditor",
+  //   subtitle: "SecureBlock",
+  //   duration: "2025 – Present",
+  //   description: "Auditing Ethereum contracts for vulnerabilities.",
+  //   image: profile1,
+  // }
+  
 ];
 
 export default function SlimFlipCards() {
@@ -254,7 +256,7 @@ const renderCards = (data: typeof education) =>
 </div>
 
 
-{/* bg-[#0f172a] */}
+
              
 
               {/* Image + Text */}

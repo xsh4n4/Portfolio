@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 // Import your images correctly (ensure these are public assets or use Next.js Image if needed)
 import Web1Web2Web3 from "@/components/assets/Web1Web2Web3.png";
 import llmvsxss from "@/components/assets/llmvsxss.jpg";
-import song from "@/components/assets/profilex.jpg";
-import fake_invoice from "@/components/assets/profilex.jpg";
-import coming_soon from "@/components/assets/profilex.jpg";
+import aimeetsblockchain from "@/components/assets/aimeetsblockchain.jpg";
+import bugbounty from "@/components/assets/bugbounty.jpg";
+
 
 const blogs = [
   {
@@ -27,16 +27,16 @@ const blogs = [
     link: "https://medium.com/@xsh4n4/llms-vs-xss-p1-4f8d97095a8f",
   },
   {
-    title: "MoodMate",
-    description: "AI based song recommendar according to your Images and voice record. Still in progress",
-    image: song,
-    link: "http://moodmate-beta.vercel.app",
+    title: "AI-Powered Decentralization",
+    description: "The Future of Autonomous Blockchain Networks",
+    image: aimeetsblockchain,
+    link: "https://medium.com/@xsh4n4/ai-powered-decentralization-the-future-of-autonomous-blockchain-networks-6a7f3cbf6d81",
   },
   {
-    title: "BlackTrace",
-    description: "Fraud Invoice Detection - A tool to detect fraud invoices.",
-    image: fake_invoice,
-    link: "https://invoice-detectt.netlify.app/",
+    title: "From Zero to Hero",
+    description: " Our First Steps into Bug Bounty Hunting",
+    image: bugbounty,
+    link: "https://medium.com/@xsh4n4/from-zero-to-hero-6ee8b6333aca",
   },
  
 ];
@@ -45,7 +45,7 @@ const blog = () => {
   return (
     <>
       {/* blogs Section */}
-      <section id="blogs" className="py-16 md:py-20 px-4 bg-black/50">
+      <section id="blog" className="py-16 md:py-20 px-4 bg-black/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center space-x-2 mb-8 md:mb-12 animate-fade-in">
             <Code className="text-blue-500" size={28} />

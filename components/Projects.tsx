@@ -23,7 +23,7 @@ interface Project {
 }
 
 export default function Projects() {
-  const [activeTab, setActiveTab] = useState<"fullstack" | "mini" | "landing">("fullstack")
+  const [activeTab, setActiveTab] = useState<"fullstack" | "blockchain" | "security">("fullstack")
   const [, setHoveredIndex] = useState<number | null>(null)
 
   const projects: Record<string, Project[]> = {
@@ -50,7 +50,7 @@ export default function Projects() {
         techStack: ["Next.js", "React", "Tailwind CSS"],
       },
     ],
-    mini: [
+    blockchain: [
       {
         title: "Cloud Clipper",
         url: "http://Cloudclipper.vercel.app",
@@ -73,7 +73,7 @@ export default function Projects() {
         techStack: ["Next.js", "React", "Tailwind CSS"],
       },
     ],
-    landing: [
+    security: [
       {
         title: "Zen Ops",
         url: "http://Zen-ops.vercel.app",
@@ -137,15 +137,14 @@ export default function Projects() {
           </h2>
         </motion.div>
           <p className="text-gray-400  max-w-lg mx-auto text-sm md:text-base">
-            A showcase of my web development journey, featuring full-stack applications, mini projects, and landing
-            pages.
+            A showcase of my web development journey, featuring full-stack applications, blockchain projects, and security audits.
           </p>
         </div>
 
         {/* Tabs */}
         <div className="flex justify-center rounded-xl mb-10">
           <div className="inline-flex p-1 bg-gray-900/50 rounded-xl">
-            {(["fullstack", "mini", "landing"] as const).map((tab) => (
+            {(["fullstack", "blockchain", "security"] as const).map((tab) => (
               <button
                 key={tab}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -155,7 +154,7 @@ export default function Projects() {
                 }`}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab === "fullstack" ? "Fullstack Projects" : tab === "mini" ? "Mini Projects" : "Landing Pages"}
+                {tab === "fullstack" ? "Fullstack Projects" : tab === "blockchain" ? "Blockchain Projects" : "Security Audits"}
               </button>
             ))}
           </div>
