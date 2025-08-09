@@ -28,7 +28,11 @@ const slugs = [
   "python",
   "tensorflow",
   "numpy",
-  "pandas"
+  "pandas",
+  "rust",
+    "ethereum",
+    "solidity",
+    "web3dotjs"
 ];
 
 export function IconCloudDemo() {
