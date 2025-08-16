@@ -198,7 +198,7 @@ const experience = [
     image: acmegradelogo,
   },
   {
-    title: "Blockchain Developer",
+    title: "Blockchain FullStack Developer",
     subtitle: "Toshik IT Solutions",
     duration: "May 2025 – July 2025",
     description: "Focused on smart contract development and integration using Solidity and Foundry. Built and optimized secure, gas-efficient contracts for real-world decentralized applications.",
