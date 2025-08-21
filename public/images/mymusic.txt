@@ -1,0 +1,2409 @@
+home.jsx
+
+import React, { useState } from 'react';
+import { FiPlay, FiPause } from 'react-icons/fi';
+import './Home.css';
+
+const Home = ({ onTrackSelect, setPlaylist }) => {
+  const [selectedLanguage, setSelectedLanguage] = useState('english');
+  const [selectedArtist, setSelectedArtist] = useState(null);
+
+  const musicData = {
+    english: {
+      artists: [
+        {
+          id: 1,
+          name: 'Ed Sheeran',
+          image: 'src/assets/images/artists/ed-sheeran.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Shape of You',
+              duration: '3:53',
+              audio: 'src/assets/audio/english/ed-sheeran/shape-of-you.mp3',
+              image: '/assets/images/albums/shape-of-you.jpg'
+            },
+            {
+              id: 2,
+              title: 'Perfect',
+              duration: '4:23',
+              audio: '/assets/audio/english/ed-sheeran/perfect.mp3',
+              image: '/assets/images/albums/perfect.jpg'
+            },
+            {
+              id: 3,
+              title: 'Thinking Out Loud',
+              duration: '4:41',
+              audio: '/assets/audio/english/ed-sheeran/thinking-out-loud.mp3',
+              image: '/assets/images/albums/thinking-out-loud.jpg'
+            },
+            {
+              id: 4,
+              title: 'Photograph',
+              duration: '4:18',
+              audio: '/assets/audio/english/ed-sheeran/photograph.mp3',
+              image: '/assets/images/albums/photograph.jpg'
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: 'Taylor Swift',
+          image: '/assets/images/artists/taylor-swift.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Love Story',
+              duration: '3:55',
+              audio: '/assets/audio/english/taylor-swift/love-story.mp3',
+              image: '/assets/images/albums/love-story.jpg'
+            },
+            {
+              id: 2,
+              title: 'Blank Space',
+              duration: '3:51',
+              audio: '/assets/audio/english/taylor-swift/blank-space.mp3',
+              image: '/assets/images/albums/blank-space.jpg'
+            },
+            {
+              id: 3,
+              title: 'Shake It Off',
+              duration: '3:39',
+              audio: '/assets/audio/english/taylor-swift/shake-it-off.mp3',
+              image: '/assets/images/albums/shake-it-off.jpg'
+            },
+            {
+              id: 4,
+              title: 'You Belong With Me',
+              duration: '3:51',
+              audio: '/assets/audio/english/taylor-swift/you-belong-with-me.mp3',
+              image: '/assets/images/albums/you-belong-with-me.jpg'
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: 'Adele',
+          image: '/assets/images/artists/adele.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Hello',
+              duration: '4:55',
+              audio: '/assets/audio/english/adele/hello.mp3',
+              image: '/assets/images/albums/hello.jpg'
+            },
+            {
+              id: 2,
+              title: 'Someone Like You',
+              duration: '4:45',
+              audio: '/assets/audio/english/adele/someone-like-you.mp3',
+              image: '/assets/images/albums/someone-like-you.jpg'
+            },
+            {
+              id: 3,
+              title: 'Rolling in the Deep',
+              duration: '3:48',
+              audio: '/assets/audio/english/adele/rolling-in-the-deep.mp3',
+              image: '/assets/images/albums/rolling-in-the-deep.jpg'
+            },
+            {
+              id: 4,
+              title: 'Set Fire to the Rain',
+              duration: '4:02',
+              audio: '/assets/audio/english/adele/set-fire-to-the-rain.mp3',
+              image: '/assets/images/albums/set-fire-to-the-rain.jpg'
+            }
+          ]
+        }
+      ]
+    },
+    hindi: {
+      artists: [
+        {
+          id: 1,
+          name: 'Arijit Singh',
+          image: '/assets/images/artists/arijit-singh.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Tum Hi Ho',
+              duration: '4:22',
+              audio: '/assets/audio/hindi/arijit-singh/tum-hi-ho.mp3',
+              image: '/assets/images/albums/tum-hi-ho.jpg'
+            },
+            {
+              id: 2,
+              title: 'Channa Mereya',
+              duration: '4:49',
+              audio: '/assets/audio/hindi/arijit-singh/channa-mereya.mp3',
+              image: '/assets/images/albums/channa-mereya.jpg'
+            },
+            {
+              id: 3,
+              title: 'Raabta',
+              duration: '4:57',
+              audio: '/assets/audio/hindi/arijit-singh/raabta.mp3',
+              image: '/assets/images/albums/raabta.jpg'
+            },
+            {
+              id: 4,
+              title: 'Ae Dil Hai Mushkil',
+              duration: '4:29',
+              audio: '/assets/audio/hindi/arijit-singh/ae-dil-hai-mushkil.mp3',
+              image: '/assets/images/albums/ae-dil-hai-mushkil.jpg'
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: 'Shreya Ghoshal',
+          image: '/assets/images/artists/shreya-ghoshal.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Param Sundari',
+              duration: '3:43',
+              audio: '/assets/audio/hindi/shreya-ghoshal/param-sundari.mp3',
+              image: '/assets/images/albums/param-sundari.jpg'
+            },
+            {
+              id: 2,
+              title: 'Manwa Laage',
+              duration: '4:14',
+              audio: '/assets/audio/hindi/shreya-ghoshal/manwa-laage.mp3',
+              image: '/assets/images/albums/manwa-laage.jpg'
+            },
+            {
+              id: 3,
+              title: 'Teri Meri',
+              duration: '4:25',
+              audio: '/assets/audio/hindi/shreya-ghoshal/teri-meri.mp3',
+              image: '/assets/images/albums/teri-meri.jpg'
+            },
+            {
+              id: 4,
+              title: 'Sun Raha Hai',
+              duration: '4:54',
+              audio: '/assets/audio/hindi/shreya-ghoshal/sun-raha-hai.mp3',
+              image: '/assets/images/albums/sun-raha-hai.jpg'
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: 'Sonu Nigam',
+          image: '/assets/images/artists/sonu-nigam.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Kal Ho Naa Ho',
+              duration: '5:21',
+              audio: '/assets/audio/hindi/sonu-nigam/kal-ho-naa-ho.mp3',
+              image: '/assets/images/albums/kal-ho-naa-ho.jpg'
+            },
+            {
+              id: 2,
+              title: 'Main Hoon Na',
+              duration: '4:20',
+              audio: '/assets/audio/hindi/sonu-nigam/main-hoon-na.mp3',
+              image: '/assets/images/albums/main-hoon-na.jpg'
+            },
+            {
+              id: 3,
+              title: 'Suraj Hua Maddham',
+              duration: '7:07',
+              audio: '/assets/audio/hindi/sonu-nigam/suraj-hua-maddham.mp3',
+              image: '/assets/images/albums/suraj-hua-maddham.jpg'
+            },
+            {
+              id: 4,
+              title: 'Saathiya',
+              duration: '6:34',
+              audio: '/assets/audio/hindi/sonu-nigam/saathiya.mp3',
+              image: '/assets/images/albums/saathiya.jpg'
+            }
+          ]
+        }
+      ]
+    },
+    telugu: {
+      artists: [
+        {
+          id: 1,
+          name: 'Sid Sriram',
+          image: '/assets/images/artists/sid-sriram.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Inkem Inkem Inkem Kaavaale',
+              duration: '4:28',
+              audio: '/assets/audio/telugu/sid-sriram/inkem-inkem.mp3',
+              image: '/assets/images/albums/inkem-inkem.jpg'
+            },
+            {
+              id: 2,
+              title: 'Samajavaragamana',
+              duration: '3:40',
+              audio: '/assets/audio/telugu/sid-sriram/samajavaragamana.mp3',
+              image: '/assets/images/albums/samajavaragamana.jpg'
+            },
+            {
+              id: 3,
+              title: 'Butta Bomma',
+              duration: '3:18',
+              audio: '/assets/audio/telugu/sid-sriram/butta-bomma.mp3',
+              image: '/assets/images/albums/butta-bomma.jpg'
+            },
+            {
+              id: 4,
+              title: 'O Rendu Prema Meghaalila',
+              duration: '4:01',
+              audio: '/assets/audio/telugu/sid-sriram/o-rendu-prema.mp3',
+              image: '/assets/images/albums/o-rendu-prema.jpg'
+            }
+          ]
+        },
+        {
+          id: 2,
+          name: 'Anurag Kulkarni',
+          image: '/assets/images/artists/anurag-kulkarni.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Undiporaadhey',
+              duration: '3:51',
+              audio: '/assets/audio/telugu/anurag-kulkarni/undiporaadhey.mp3',
+              image: '/assets/images/albums/undiporaadhey.jpg'
+            },
+            {
+              id: 2,
+              title: 'Nee Kannu Neeli Samudram',
+              duration: '4:12',
+              audio: '/assets/audio/telugu/anurag-kulkarni/nee-kannu.mp3',
+              image: '/assets/images/albums/nee-kannu.jpg'
+            },
+            {
+              id: 3,
+              title: 'Oo Antava Oo Oo Antava',
+              duration: '3:37',
+              audio: '/assets/audio/telugu/anurag-kulkarni/oo-antava.mp3',
+              image: '/assets/images/albums/oo-antava.jpg'
+            },
+            {
+              id: 4,
+              title: 'Naatu Naatu',
+              duration: '3:36',
+              audio: '/assets/audio/telugu/anurag-kulkarni/naatu-naatu.mp3',
+              image: '/assets/images/albums/naatu-naatu.jpg'
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: 'S.P. Balasubrahmanyam',
+          image: '/assets/images/artists/spb.jpg',
+          songs: [
+            {
+              id: 1,
+              title: 'Ee Velalo Neevu',
+              duration: '4:45',
+              audio: '/assets/audio/telugu/spb/ee-velalo.mp3',
+              image: '/assets/images/albums/ee-velalo.jpg'
+            },
+            {
+              id: 2,
+              title: 'Nuvvostanante Nenoddantana',
+              duration: '4:20',
+              audio: '/assets/audio/telugu/spb/nuvvostanante.mp3',
+              image: '/assets/images/albums/nuvvostanante.jpg'
+            },
+            {
+              id: 3,
+              title: 'Uppenantha',
+              duration: '4:55',
+              audio: '/assets/audio/telugu/spb/uppenantha.mp3',
+              image: '/assets/images/albums/uppenantha.jpg'
+            },
+            {
+              id: 4,
+              title: 'Nuvvu Naaku Nachav',
+              duration: '4:30',
+              audio: '/assets/audio/telugu/spb/nuvvu-naaku.mp3',
+              image: '/assets/images/albums/nuvvu-naaku.jpg'
+            }
+          ]
+        }
+      ]
+    }
+  };
+
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
+    setSelectedArtist(null);
+  };
+
+  const handleArtistSelect = (artist) => {
+    setSelectedArtist(artist);
+    setPlaylist(artist.songs);
+  };
+
+  const handleSongSelect = (song) => {
+    onTrackSelect(song);
+  };
+
+  return (
+    <div className="home">
+      <div className="language-selector">
+        <button 
+          className={`language-btn ${selectedLanguage === 'english' ? 'active' : ''}`}
+          onClick={() => handleLanguageChange('english')}
+        >
+          English
+        </button>
+        <button 
+          className={`language-btn ${selectedLanguage === 'hindi' ? 'active' : ''}`}
+          onClick={() => handleLanguageChange('hindi')}
+        >
+          Hindi
+        </button>
+        <button 
+          className={`language-btn ${selectedLanguage === 'telugu' ? 'active' : ''}`}
+          onClick={() => handleLanguageChange('telugu')}
+        >
+          Telugu
+        </button>
+      </div>
+
+      <div className="artists-grid">
+        {musicData[selectedLanguage].artists.map(artist => (
+          <div 
+            key={artist.id} 
+            className={`artist-card ${selectedArtist?.id === artist.id ? 'selected' : ''}`}
+            onClick={() => handleArtistSelect(artist)}
+          >
+            <img
+              src={artist.image}
+              alt={artist.name}
+              className="artist-image"
+            />
+            <h3 className="artist-name">{artist.name}</h3>
+          </div>
+        ))}
+      </div>
+
+      {selectedArtist && (
+        <div className="songs-list">
+          <h2 className="section-title">{selectedArtist.name}'s Songs</h2>
+          {selectedArtist.songs.map(song => (
+            <div 
+              key={song.id} 
+              className="song-item"
+              onClick={() => handleSongSelect(song)}
+            >
+              <img
+                src={song.image}
+                alt={song.title}
+                className="song-image"
+              />
+              <div className="song-info">
+                <h3 className="song-title">{song.title}</h3>
+                <p className="song-duration">{song.duration}</p>
+              </div>
+              <button className="play-btn">
+                <FiPlay />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Home;
+
+home.css
+
+.home {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .language-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  
+  .language-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #2a2a2a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .language-btn:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-2px);
+  }
+  
+  .language-btn.active {
+    background-color: #1db954;
+    color: #fff;
+  }
+  
+  .artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .artist-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .artist-card.selected {
+    border: 2px solid #1db954;
+  }
+  
+  .artist-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .artist-name {
+    padding: 1rem;
+    margin: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .songs-list {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  
+  .section-title {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .song-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .song-item:hover {
+    background-color: #2a2a2a;
+    transform: translateX(5px);
+  }
+  
+  .song-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 1rem;
+    object-fit: cover;
+  }
+  
+  .song-info {
+    flex: 1;
+  }
+  
+  .song-title {
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .song-duration {
+    color: #b3b3b3;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .play-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .play-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .home {
+      padding: 1rem;
+    }
+  
+    .language-selector {
+      flex-wrap: wrap;
+    }
+  
+    .artists-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+  
+    .artist-image {
+      height: 150px;
+    }
+  
+    .songs-list {
+      padding: 1rem;
+    }
+  
+    .song-item {
+      padding: 0.75rem;
+    }
+  
+    .song-image {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .artists-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .language-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    .song-title {
+      font-size: 1rem;
+    }
+  
+    .song-duration {
+      font-size: 0.8rem;
+    }
+  }
+
+library.jsx
+
+import React, { useState } from 'react';
+import { FiPlay, FiPause, FiPlus, FiTrash2, FiMusic } from 'react-icons/fi';
+import './Library.css';
+
+const Library = ({ onTrackSelect, setPlaylist }) => {
+  const [playlists, setPlaylists] = useState([
+    {
+      id: 1,
+      name: 'Favorites',
+      songs: [
+        {
+          id: 1,
+          title: 'Shape of You',
+          artist: 'Ed Sheeran',
+          duration: '3:53',
+          image: '/assets/images/albums/shape-of-you.jpg',
+          audio: '/assets/audio/english/ed-sheeran/shape-of-you.mp3'
+        },
+        {
+          id: 2,
+          title: 'Tum Hi Ho',
+          artist: 'Arijit Singh',
+          duration: '4:22',
+          image: '/assets/images/albums/tum-hi-ho.jpg',
+          audio: '/assets/audio/hindi/arijit-singh/tum-hi-ho.mp3'
+        }
+      ]
+    }
+  ]);
+
+  const [newPlaylistName, setNewPlaylistName] = useState('');
+  const [showNewPlaylistInput, setShowNewPlaylistInput] = useState(false);
+  const [selectedPlaylist, setSelectedPlaylist] = useState(null);
+  const [showAddSongs, setShowAddSongs] = useState(false);
+
+  const handleCreatePlaylist = () => {
+    if (newPlaylistName.trim()) {
+      const newPlaylist = {
+        id: playlists.length + 1,
+        name: newPlaylistName,
+        songs: []
+      };
+      setPlaylists([...playlists, newPlaylist]);
+      setNewPlaylistName('');
+      setShowNewPlaylistInput(false);
+    }
+  };
+
+  const handleDeletePlaylist = (playlistId) => {
+    setPlaylists(playlists.filter(playlist => playlist.id !== playlistId));
+    if (selectedPlaylist?.id === playlistId) {
+      setSelectedPlaylist(null);
+    }
+  };
+
+  const handlePlayPlaylist = (playlist) => {
+    setPlaylist(playlist.songs);
+    if (playlist.songs.length > 0) {
+      onTrackSelect(playlist.songs[0]);
+    }
+  };
+
+  const handleAddToPlaylist = (playlistId) => {
+    setSelectedPlaylist(playlists.find(p => p.id === playlistId));
+    setShowAddSongs(true);
+  };
+
+  const handleAddSong = (song) => {
+    if (selectedPlaylist) {
+      const updatedPlaylists = playlists.map(p => {
+        if (p.id === selectedPlaylist.id) {
+          return {
+            ...p,
+            songs: [...p.songs, song]
+          };
+        }
+        return p;
+      });
+      setPlaylists(updatedPlaylists);
+      setSelectedPlaylist(updatedPlaylists.find(p => p.id === selectedPlaylist.id));
+    }
+  };
+
+  return (
+    <div className="library">
+      <div className="library-header">
+        <h2 className="section-title">Your Library</h2>
+        <button 
+          className="create-playlist-btn"
+          onClick={() => setShowNewPlaylistInput(true)}
+        >
+          <FiPlus /> Create Playlist
+        </button>
+      </div>
+
+      {showNewPlaylistInput && (
+        <div className="new-playlist-input">
+          <input
+            type="text"
+            value={newPlaylistName}
+            onChange={(e) => setNewPlaylistName(e.target.value)}
+            placeholder="Enter playlist name"
+            className="playlist-input"
+          />
+          <button 
+            className="save-playlist-btn"
+            onClick={handleCreatePlaylist}
+          >
+            Save
+          </button>
+          <button 
+            className="cancel-playlist-btn"
+            onClick={() => {
+              setShowNewPlaylistInput(false);
+              setNewPlaylistName('');
+            }}
+          >
+            Cancel
+          </button>
+        </div>
+      )}
+
+      <div className="playlists-grid">
+        {playlists.map(playlist => (
+          <div key={playlist.id} className="playlist-card">
+            <div className="playlist-header">
+              <h3 className="playlist-name">{playlist.name}</h3>
+              <div className="playlist-actions">
+                <button 
+                  className="add-songs-btn"
+                  onClick={() => handleAddToPlaylist(playlist.id)}
+                >
+                  <FiPlus />
+                </button>
+                <button 
+                  className="delete-playlist-btn"
+                  onClick={() => handleDeletePlaylist(playlist.id)}
+                >
+                  <FiTrash2 />
+                </button>
+              </div>
+            </div>
+            <div className="playlist-info">
+              <span className="song-count">{playlist.songs.length} songs</span>
+              <button 
+                className="play-playlist-btn"
+                onClick={() => handlePlayPlaylist(playlist)}
+                disabled={playlist.songs.length === 0}
+              >
+                <FiPlay /> Play All
+              </button>
+            </div>
+            <div className="playlist-songs">
+              {playlist.songs.map(song => (
+                <div 
+                  key={song.id} 
+                  className="song-item"
+                  onClick={() => onTrackSelect(song)}
+                >
+                  <img
+                    src={song.image}
+                    alt={song.title}
+                    className="song-image"
+                  />
+                  <div className="song-info">
+                    <h4 className="song-title">{song.title}</h4>
+                    <p className="song-artist">{song.artist}</p>
+                  </div>
+                  <span className="song-duration">{song.duration}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {showAddSongs && selectedPlaylist && (
+        <div className="add-songs-modal">
+          <div className="modal-content">
+            <h3>Add Songs to {selectedPlaylist.name}</h3>
+            <div className="available-songs">
+              {/* Add your available songs list here */}
+              <div className="song-item" onClick={() => handleAddSong({
+                id: 3,
+                title: 'New Song',
+                artist: 'New Artist',
+                duration: '3:30',
+                image: '/assets/images/albums/default.jpg',
+                audio: '/assets/audio/default.mp3'
+              })}>
+                <FiMusic className="song-icon" />
+                <div className="song-info">
+                  <h4 className="song-title">New Song</h4>
+                  <p className="song-artist">New Artist</p>
+                </div>
+                <button className="add-btn">
+                  <FiPlus />
+                </button>
+              </div>
+            </div>
+            <button 
+              className="close-modal-btn"
+              onClick={() => {
+                setShowAddSongs(false);
+                setSelectedPlaylist(null);
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Library;
+
+library.css
+
+.library {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .library-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .create-playlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .create-playlist-btn:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+  }
+  
+  .new-playlist-input {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .playlist-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .playlist-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #1db954;
+  }
+  
+  .save-playlist-btn,
+  .cancel-playlist-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .save-playlist-btn {
+    background-color: #1db954;
+    color: #fff;
+  }
+  
+  .save-playlist-btn:hover {
+    background-color: #1ed760;
+  }
+  
+  .cancel-playlist-btn {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  .cancel-playlist-btn:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .playlists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .playlist-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .playlist-name {
+    color: #fff;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .playlist-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .add-songs-btn,
+  .delete-playlist-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .add-songs-btn:hover {
+    color: #1db954;
+    background-color: rgba(29, 185, 84, 0.1);
+  }
+  
+  .delete-playlist-btn:hover {
+    color: #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+  }
+  
+  .playlist-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .song-count {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+  }
+  
+  .play-playlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .play-playlist-btn:disabled {
+    background-color: #2a2a2a;
+    color: #b3b3b3;
+    cursor: not-allowed;
+  }
+  
+  .play-playlist-btn:not(:disabled):hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+  }
+  
+  .playlist-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .song-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .song-item:hover {
+    background-color: #2a2a2a;
+    transform: translateX(5px);
+  }
+  
+  .song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .song-info {
+    flex: 1;
+  }
+  
+  .song-title {
+    color: #fff;
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+  }
+  
+  .song-artist {
+    color: #b3b3b3;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .song-duration {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+  }
+  
+  .add-songs-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  .modal-content h3 {
+    color: #fff;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .available-songs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .song-icon {
+    font-size: 1.5rem;
+    color: #b3b3b3;
+  }
+  
+  .add-btn {
+    background: none;
+    border: none;
+    color: #1db954;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: rgba(29, 185, 84, 0.1);
+    transform: scale(1.1);
+  }
+  
+  .close-modal-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .close-modal-btn:hover {
+    background-color: #2a2a2a;
+  }
+  
+  @media (max-width: 768px) {
+    .library {
+      padding: 1rem;
+    }
+  
+    .playlists-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .new-playlist-input {
+      flex-direction: column;
+    }
+  
+    .save-playlist-btn,
+    .cancel-playlist-btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .library-header {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  
+    .create-playlist-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .modal-content {
+      width: 95%;
+      padding: 1rem;
+    }
+  }
+
+musicplayer.jsx
+
+import React, { useState, useRef, useEffect } from 'react';
+import { FiPlay, FiPause, FiSkipBack, FiSkipForward, FiShuffle, FiRepeat, FiVolume2 } from 'react-icons/fi';
+import './MusicPlayer.css';
+
+const MusicPlayer = ({ currentTrack, isPlaying, onPlayPause }) => {
+  const [volume, setVolume] = useState(0.7);
+  const [progress, setProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play();
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      const current = audioRef.current.currentTime;
+      const total = audioRef.current.duration;
+      setCurrentTime(current);
+      setDuration(total);
+      setProgress((current / total) * 100);
+    }
+  };
+
+  const handleProgressClick = (e) => {
+    if (audioRef.current) {
+      const rect = e.target.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      const newTime = pos * duration;
+      audioRef.current.currentTime = newTime;
+      setCurrentTime(newTime);
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+  };
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  return (
+    <div className="music-player">
+      <audio
+        ref={audioRef}
+        src={currentTrack?.preview_url}
+        onTimeUpdate={handleTimeUpdate}
+        onEnded={() => setIsPlaying(false)}
+      />
+      
+      <div className="player-left">
+        <img
+          src={currentTrack?.album?.images[0]?.url || 'https://via.placeholder.com/60'}
+          alt={currentTrack?.name || 'Track'}
+          className="current-track-image"
+        />
+        <div className="track-info">
+          <h3 className="track-title">{currentTrack?.name || 'No track playing'}</h3>
+          <p className="artist-name">{currentTrack?.artists?.[0]?.name || 'Unknown artist'}</p>
+        </div>
+      </div>
+      
+      <div className="player-center">
+        <div className="player-controls">
+          <button className="control-btn">
+            <FiShuffle />
+          </button>
+          <button className="control-btn">
+            <FiSkipBack />
+          </button>
+          <button className="play-btn" onClick={onPlayPause}>
+            {isPlaying ? <FiPause /> : <FiPlay />}
+          </button>
+          <button className="control-btn">
+            <FiSkipForward />
+          </button>
+          <button className="control-btn">
+            <FiRepeat />
+          </button>
+        </div>
+        
+        <div className="progress-bar">
+          <span className="time">{formatTime(currentTime)}</span>
+          <div className="progress" onClick={handleProgressClick}>
+            <div className="progress-fill" style={{ width: `${progress}%` }}></div>
+          </div>
+          <span className="time">{formatTime(duration)}</span>
+        </div>
+      </div>
+      
+      <div className="player-right">
+        <button className="control-btn">
+          <FiVolume2 />
+        </button>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={volume}
+          onChange={handleVolumeChange}
+          className="volume-slider"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default MusicPlayer;
+
+musicplayer.css
+
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 90px;
+    background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .player-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 0.3;
+  }
+  
+  .current-track-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .current-track-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .track-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .artist-name {
+    color: #b3b3b3;
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  .player-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 0.4;
+  }
+  
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .control-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .control-btn:hover {
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .play-btn {
+    background: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .play-btn:hover {
+    transform: scale(1.1);
+    background: #1db954;
+  }
+  
+  .play-btn svg {
+    color: #000;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .progress-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .time {
+    color: #b3b3b3;
+    font-size: 12px;
+    min-width: 40px;
+  }
+  
+  .progress {
+    flex: 1;
+    height: 4px;
+    background: #535353;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: #b3b3b3;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+  }
+  
+  .progress:hover .progress-fill {
+    background: #1db954;
+  }
+  
+  .player-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 0.3;
+    justify-content: flex-end;
+  }
+  
+  .volume-slider {
+    width: 100px;
+    height: 4px;
+    background: #535353;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .volume-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .volume-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background: #b3b3b3;
+    border-radius: 2px;
+    transition: width 0.1s linear;
+  }
+  
+  .volume-slider:hover .volume-fill {
+    background: #1db954;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .play-btn.playing {
+    animation: pulse 2s infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .music-player {
+      padding: 0 10px;
+    }
+    
+    .player-left {
+      flex: 0.4;
+    }
+    
+    .player-center {
+      flex: 0.3;
+    }
+    
+    .player-right {
+      flex: 0.3;
+    }
+    
+    .volume-slider {
+      width: 60px;
+    }
+  }
+
+search.jsx
+
+import React, { useState, useEffect } from 'react';
+import { FiSearch, FiX, FiPlay, FiMusic, FiGlobe } from 'react-icons/fi';
+import './Search.css';
+
+const Search = ({ onTrackSelect, setPlaylist }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState({
+    songs: [],
+    artists: [],
+    playlists: [],
+    languages: []
+  });
+  const [suggestions, setSuggestions] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const mockData = {
+    songs: [
+      {
+        id: 1,
+        title: 'Shape of You',
+        artist: 'Ed Sheeran',
+        duration: '3:53',
+        image: 'https://via.placeholder.com/150',
+        audio: '/assets/audio/english/ed-sheeran/shape-of-you.mp3',
+        language: 'English'
+      },
+      {
+        id: 2,
+        title: 'Tum Hi Ho',
+        artist: 'Arijit Singh',
+        duration: '4:22',
+        image: 'https://via.placeholder.com/150',
+        audio: '/assets/audio/hindi/arijit-singh/tum-hi-ho.mp3',
+        language: 'Hindi'
+      },
+      {
+        id: 3,
+        title: 'Naatu Naatu',
+        artist: 'Anurag Kulkarni',
+        duration: '3:36',
+        image: 'https://via.placeholder.com/150',
+        audio: '/assets/audio/telugu/anurag-kulkarni/naatu-naatu.mp3',
+        language: 'Telugu'
+      }
+    ],
+    languages: ['English', 'Hindi', 'Telugu', 'Punjabi', 'Tamil', 'Kannada']
+  };
+
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      setIsLoading(true);
+      // Simulate API call delay
+      setTimeout(() => {
+        const query = searchQuery.toLowerCase();
+        const results = {
+          songs: mockData.songs.filter(song => 
+            song.title.toLowerCase().includes(query) ||
+            song.artist.toLowerCase().includes(query) ||
+            song.language.toLowerCase().includes(query)
+          ),
+          languages: mockData.languages.filter(lang => 
+            lang.toLowerCase().includes(query)
+          )
+        };
+        setSearchResults(results);
+        setIsLoading(false);
+      }, 500);
+    } else {
+      setSearchResults({ songs: [], artists: [], playlists: [], languages: [] });
+    }
+  }, [searchQuery]);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
+  const clearSearch = () => {
+    setSearchQuery('');
+    setSearchResults({ songs: [], artists: [], playlists: [], languages: [] });
+  };
+
+  const formatTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  return (
+    <div className="search">
+      <div className="search-header">
+        <h2 className="section-title">Search</h2>
+        <div className="search-input-container">
+          <FiSearch className="search-icon" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => handleSearch(e.target.value)}
+            placeholder="Search for songs, artists, or languages..."
+            className="search-input"
+          />
+          {searchQuery && (
+            <button className="clear-search-btn" onClick={clearSearch}>
+              <FiX />
+            </button>
+          )}
+        </div>
+      </div>
+
+      {isLoading ? (
+        <div className="loading">
+          <div className="loading-spinner"></div>
+          <p>Searching...</p>
+        </div>
+      ) : searchQuery ? (
+        <div className="search-results">
+          {searchResults.languages.length > 0 && (
+            <div className="results-section">
+              <h3 className="results-title">
+                <FiGlobe /> Languages
+              </h3>
+              <div className="languages-grid">
+                {searchResults.languages.map((language, index) => (
+                  <div key={index} className="language-card">
+                    <span className="language-name">{language}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {searchResults.songs.length > 0 && (
+            <div className="results-section">
+              <h3 className="results-title">
+                <FiMusic /> Songs
+              </h3>
+              <div className="songs-list">
+                {searchResults.songs.map(song => (
+                  <div 
+                    key={song.id} 
+                    className="song-item"
+                    onClick={() => onTrackSelect(song)}
+                  >
+                    <img
+                      src={song.image}
+                      alt={song.title}
+                      className="song-image"
+                    />
+                    <div className="song-info">
+                      <h4 className="song-title">{song.title}</h4>
+                      <p className="song-artist">{song.artist}</p>
+                      <span className="song-language">{song.language}</span>
+                    </div>
+                    <span className="song-duration">{song.duration}</span>
+                    <button className="play-btn">
+                      <FiPlay />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {Object.values(searchResults).every(arr => arr.length === 0) && (
+            <div className="no-results">
+              <p>No results found for "{searchQuery}"</p>
+              <div className="suggestions">
+                <p>Try searching for:</p>
+                <ul>
+                  <li>Song titles</li>
+                  <li>Artist names</li>
+                  <li>Languages (English, Hindi, Telugu, etc.)</li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="search-suggestions">
+          <h3>Popular Searches</h3>
+          <div className="suggestions-grid">
+            {mockData.languages.map((language, index) => (
+              <div key={index} className="suggestion-card">
+                <FiGlobe className="suggestion-icon" />
+                <span>{language} Music</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Search;
+
+search.css
+
+.search {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-darker) 100%);
+  }
+  
+  .search-header {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .search-input-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 1rem 3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 1.2rem;
+  }
+  
+  .clear-search-btn {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .clear-search-btn:hover {
+    color: var(--accent-color);
+    transform: translateY(-50%) scale(1.2);
+  }
+  
+  .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .results-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+  }
+  
+  .results-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+  }
+  
+  .results-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .language-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+  }
+  
+  .language-card:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+  }
+  
+  .songs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .song-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+  }
+  
+  .song-item:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: translateX(10px);
+  }
+  
+  .song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .song-info {
+    flex: 1;
+  }
+  
+  .song-title {
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  
+  .song-artist {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+  
+  .song-language {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    margin-top: 0.5rem;
+  }
+  
+  .song-duration {
+    color: var(--text-muted);
+  }
+  
+  .play-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .play-btn:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+  }
+  
+  .suggestions {
+    margin-top: 1rem;
+  }
+  
+  .suggestions ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .suggestions li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .suggestions li:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .search-suggestions {
+    margin-top: 2rem;
+  }
+  
+  .suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .suggestion-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .suggestion-card:hover {
+    background: rgba(255, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+  }
+  
+  .suggestion-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    to {
+      text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search {
+      padding: 1rem;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .languages-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  
+    .suggestions-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+
+
+app.jsx
+
+import React, { useState, useRef, useEffect } from 'react';
+import { FiHome, FiSearch, FiMusic, FiPlay, FiPause, FiSkipBack, FiSkipForward, FiShuffle, FiRepeat } from 'react-icons/fi';
+import Home from './components/Home';
+import Search from './components/Search';
+import Library from './components/Library';
+import MusicPlayer from './components/MusicPlayer';
+import './App.css';
+
+function App() {
+  const [currentTrack, setCurrentTrack] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(0.7);
+  const [playlist, setPlaylist] = useState([]);
+  const [activeTab, setActiveTab] = useState('home');
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play().catch(error => {
+          console.error('Error playing audio:', error);
+          setIsPlaying(false);
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying, currentTrack]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
+
+  const handleTrackSelect = (track) => {
+    setCurrentTrack(track);
+    setIsPlaying(true);
+  };
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+      setDuration(audioRef.current.duration);
+    }
+  };
+
+  const handleSeek = (e) => {
+    const newTime = e.target.value;
+    setCurrentTime(newTime);
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = e.target.value;
+    setVolume(newVolume);
+  };
+
+  const handleNext = () => {
+    if (playlist.length > 0) {
+      const currentIndex = playlist.findIndex(track => track.id === currentTrack?.id);
+      const nextIndex = (currentIndex + 1) % playlist.length;
+      setCurrentTrack(playlist[nextIndex]);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (playlist.length > 0) {
+      const currentIndex = playlist.findIndex(track => track.id === currentTrack?.id);
+      const prevIndex = (currentIndex - 1 + playlist.length) % playlist.length;
+      setCurrentTrack(playlist[prevIndex]);
+    }
+  };
+
+  return (
+    <div className="app">
+      <div className="sidebar">
+        <div className="logo">
+          <h1>Music App</h1>
+        </div>
+        <nav className="nav-menu">
+          <button 
+            className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
+            onClick={() => setActiveTab('home')}
+          >
+            <FiHome /> Home
+          </button>
+          <button 
+            className={`nav-item ${activeTab === 'search' ? 'active' : ''}`}
+            onClick={() => setActiveTab('search')}
+          >
+            <FiSearch /> Search
+          </button>
+          <button 
+            className={`nav-item ${activeTab === 'library' ? 'active' : ''}`}
+            onClick={() => setActiveTab('library')}
+          >
+            <FiMusic /> Library
+          </button>
+        </nav>
+      </div>
+
+      <div className="main-content">
+        {activeTab === 'home' && <Home onTrackSelect={handleTrackSelect} setPlaylist={setPlaylist} />}
+        {activeTab === 'search' && <Search onTrackSelect={handleTrackSelect} setPlaylist={setPlaylist} />}
+        {activeTab === 'library' && <Library onTrackSelect={handleTrackSelect} setPlaylist={setPlaylist} />}
+      </div>
+
+      {currentTrack && (
+        <div className="player-container">
+          <audio
+            ref={audioRef}
+            src={currentTrack.audio}
+            onTimeUpdate={handleTimeUpdate}
+            onEnded={handleNext}
+          />
+          <MusicPlayer
+            currentTrack={currentTrack}
+            isPlaying={isPlaying}
+            onPlayPause={handlePlayPause}
+            onNext={handleNext}
+            onPrevious={handlePrevious}
+            currentTime={currentTime}
+            duration={duration}
+            onSeek={handleSeek}
+            volume={volume}
+            onVolumeChange={handleVolumeChange}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default App;
+
+app.css
+
+:root {
+  --primary-color: #1db954;
+  --secondary-color: #191414;
+  --text-color: #ffffff;
+  --text-secondary: #b3b3b3;
+  --background-dark: #121212;
+  --background-light: #282828;
+  --glow-color: rgba(29, 185, 84, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  background-color: var(--background-light);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  background: linear-gradient(45deg, var(--primary-color), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px var(--glow-color);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px var(--glow-color);
+  }
+  to {
+    text-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+  }
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  transform: translateX(5px);
+}
+
+.nav-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.main-content {
+  background-color: var(--background-dark);
+  padding: 2rem;
+  overflow-y: auto;
+  position: relative;
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, rgba(29, 185, 84, 0.1), transparent);
+  pointer-events: none;
+}
+
+.player-container {
+  grid-column: 1 / -1;
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    flex-direction: row;
+    padding: 0.5rem;
+    z-index: 1000;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-item {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem;
+  }
+
+  .nav-item span {
+    display: none;
+  }
+
+  .nav-item {
+    justify-content: center;
+  }
+}
+
+src
+ assets
+  audio
+   english
+    ed-sheeran
+    2
+    3
+  images
+   artists
+    .jpg
+   albums
