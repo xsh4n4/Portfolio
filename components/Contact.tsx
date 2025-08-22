@@ -148,11 +148,11 @@ const Contact = () => {
               <a href="https://medium.com/@xsh4n4" title="Medium" target="_blank"><SiMedium className="hover:text-blue-400 transition" /></a>
               <a href="https://t.me/yourusername" title="Telegram" target="_blank"><FaTelegram className="hover:text-blue-400 transition" /></a>
               <a href="/resume.pdf" title="Resume" target="_blank"><LuFileText className="hover:text-blue-400 transition" /></a>
-              <a href="https://cantina.xyz/yourprofile" title="Cantina" target="_blank"><GiLaserPrecision className="hover:text-blue-400 transition" /></a>
+              {/* <a href="https://cantina.xyz/yourprofile" title="Cantina" target="_blank"><GiLaserPrecision className="hover:text-blue-400 transition" /></a>
               <a href="https://immunefi.com/profile/xsh4n4" title="Immunefi" target="_blank"><GiShield className="hover:text-blue-400 transition" /></a>
               <a href="https://hackerone.com/xsh4n4" title="HackerOne" target="_blank"><SiHackerone className="hover:text-blue-400 transition" /></a>
               <a href="https://code4rena.com/yourprofile" title="Code4rena" target="_blank"><SiTarget className="hover:text-blue-400 transition" /></a>
-              <a href="https://warpcast.com/xsh4n4" title="Farcaster" target="_blank"><TbBrandFigma className="hover:text-blue-400 transition" /></a>
+              <a href="https://warpcast.com/xsh4n4" title="Farcaster" target="_blank"><TbBrandFigma className="hover:text-blue-400 transition" /></a> */}
             </div>
             </div>
           </motion.div>
