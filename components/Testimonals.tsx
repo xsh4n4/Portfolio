@@ -1,6 +1,7 @@
 
 "use client";
-
+import Image from "next/image";
+import sindhulogo from "@/components/assets/sindhulogo.jpg";
 import React, { useRef, useEffect, useState } from "react";
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -8,20 +9,20 @@ const testimonials = [
   {
     text: "Suhana delivered a clean, efficient, and beautiful web application on time. Her attention to detail and commitment to quality is impressive.",
     name: "Anjali Verma",
-    title: "Product Manager, TechNova",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    title: "Product Manager, Acmegrade",
+    image: sindhulogo,
   },
   {
     text: "She quickly grasped complex blockchain requirements and implemented a seamless dApp. Truly reliable and talented.",
     name: "Rahul Mehta",
-    title: "Founder, BlockChain Labs",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    title: "Management, RGUKT",
+    image: sindhulogo,
   },
   {
     text: "Working with Suhana was a joy! Her frontend skills and collaborative spirit made every sprint efficient and enjoyable.",
     name: "Emily Tran",
-    title: "UX Designer, CreativEdge",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    title: "Founder, Toshik IT Solutions",
+    image: sindhulogo,
   },
 ];
 
@@ -97,11 +98,16 @@ const Testimonials = () => {
                   “{t.text}”
                 </p>
                 <div className="flex items-center space-x-4 mt-auto">
-                  <img
+                  {/* <img
                     src={t.image}
                     alt={t.name}
                     className="w-10 h-10 rounded-full object-cover"
-                  />
+                  /> */}
+                  <Image
+                                  src={t.image}
+                                  alt={t.title}
+                                  className="w-10 h-10 rounded-full object-cover"
+                                />
                   <div>
                     <h4 className="text-white font-semibold text-sm">
                       {t.name}
